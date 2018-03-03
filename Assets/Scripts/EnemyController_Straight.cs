@@ -28,6 +28,6 @@ public class EnemyController_Straight : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		transform.position = transform.position + (normalizeDirection * speed * Time.deltaTime);
+		//transform.position = transform.position + (normalizeDirection * speed * Time.deltaTime);
 	}
 }
