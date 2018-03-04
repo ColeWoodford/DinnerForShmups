@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController_Sin : MonoBehaviour
+public class EnemyControllerSin : MonoBehaviour
 {
 	public float speed;
 	//public Transform target;
