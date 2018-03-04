@@ -12,7 +12,8 @@ public class PlayerController : MonoBehaviour
 	public float speed;
 	public GameObject period_shot;
 	public GameObject Comma_shot;
-	public Transform shotSpawn;
+	public Transform shotSpawn1;
+	public Transform shotSpawn2;
 	public float fireRate;
 	private float nextFire;
 	private Rigidbody2D playerRB2D;
@@ -51,8 +52,8 @@ public class PlayerController : MonoBehaviour
 		if (Input.GetButton("Fire1") && Time.time > nextFire)
 		{
 			nextFire = Time.time + fireRate;
-			Instantiate (period_shot, shotSpawn.position, shotSpawn.rotation);
-			Instantiate (Comma_shot, shotSpawn.position, shotSpawn.rotation);
+			Instantiate (period_shot, shotSpawn1.position, shotSpawn1.rotation);
+			Instantiate (Comma_shot, shotSpawn2.position, shotSpawn2.rotation);
 		} 		
 	}
 }
