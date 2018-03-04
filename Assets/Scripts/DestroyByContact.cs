@@ -7,9 +7,6 @@ public class DestroyByContact : MonoBehaviour {
 	public int scoreValue;
 	private int health;
 	private GameController gameController;
-	public float colourChangeDelay = 0.5f;
- 	float currentDelay = 0f;
- 	bool colourChangeCollision = false;
 
 	void Start () {
 		health = scoreValue;
@@ -23,18 +20,14 @@ public class DestroyByContact : MonoBehaviour {
 		}
 	}
 
-	void Update()
-	{
-    	checkColourChange();
-	}
-
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Boundary") {
 			return;
 		}
+		if (other.tag == "Player") {
+			gameController.GameOver();
+		}
 
-		colourChangeCollision = true;
-     	currentDelay = Time.time + colourChangeDelay;
 		Destroy(other.gameObject);
 
 		health = health - 10;
@@ -42,18 +35,5 @@ public class DestroyByContact : MonoBehaviour {
 			gameController.AddScore (scoreValue);
 			Destroy(gameObject);
 		}
-	}
-
-	void checkColourChange()
-	{        
-    	if(colourChangeCollision)
-    	{
-        	transform.renderer.material.color = Color.yellow;
-        	if(Time.time > currentDelay)
-        	{
-            	transform.renderer.material.color = Color.white;
-            	colourChangeCollision = false;
-        	}
-    	}
 	}
 }
