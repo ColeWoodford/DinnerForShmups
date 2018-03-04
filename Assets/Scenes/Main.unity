@@ -8029,7 +8029,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Game Over Text
+  m_Text: Segmentation Fault
 --- !u!222 &1884437128
 CanvasRenderer:
   m_ObjectHideFlags: 0

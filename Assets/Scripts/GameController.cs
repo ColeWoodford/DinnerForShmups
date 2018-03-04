@@ -68,7 +68,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void GameOver() {
-		gameOverText.text = "Game Over";
+		gameOverText.text = "Segmentation Fault (" + score + " bytes were lost)";
 		gameOver = true;
 	}
 }
