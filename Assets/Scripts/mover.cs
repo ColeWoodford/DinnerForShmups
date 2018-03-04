@@ -10,7 +10,7 @@ public class mover : MonoBehaviour
 	void Start () 
 	{
 		playerRB2D = GetComponent<Rigidbody2D>();
-		playerRB2D.velocity = transform.forward * speed;
+		playerRB2D.velocity = transform.up * speed;
 	}
 	
 	// Update is called once per frame
