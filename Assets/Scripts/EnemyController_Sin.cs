@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController_Straight : MonoBehaviour
+public class EnemyController_Sin : MonoBehaviour
 {
 	public float speed;
 	//public Transform target;
 	//public float tumble;
-	public float horizontalMagnitude;
+	
 	public float verticalMagnitude;
+	public float cosMagnitude;
+	public float cosSpeed;
 
 	private Rigidbody2D enemyRB2D;
 	private Vector2 normalizeDirection;
+	private float horizontalMagnitude;
+	private float index;
 
 	// Use this for initialization
 	void Start ()
@@ -26,6 +30,8 @@ public class EnemyController_Straight : MonoBehaviour
 	// Because the RigidBody2D is a physics object, we use this
 	void FixedUpdate()
 	{
+		index += Time.deltaTime;
+     	horizontalMagnitude = cosMagnitude * Mathf.Cos(cosSpeed * index);
 		Vector2 movement = new Vector2(horizontalMagnitude, verticalMagnitude);
 
 		enemyRB2D.velocity = movement * speed;
