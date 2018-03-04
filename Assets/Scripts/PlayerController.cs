@@ -10,7 +10,8 @@ public class Boundary {
 public class PlayerController : MonoBehaviour
 {
 	public float speed;
-	public GameObject shot;
+	public GameObject period_shot;
+	public GameObject Comma_shot;
 	public Transform shotSpawn;
 	public float fireRate;
 	private float nextFire;
@@ -50,7 +51,8 @@ public class PlayerController : MonoBehaviour
 		if (Input.GetButton("Fire1") && Time.time > nextFire)
 		{
 			nextFire = Time.time + fireRate;
-			Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
+			Instantiate (period_shot, shotSpawn.position, shotSpawn.rotation);
+			Instantiate (Comma_shot, shotSpawn.position, shotSpawn.rotation);
 		} 		
 	}
 }
