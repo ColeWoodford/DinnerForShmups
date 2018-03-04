@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour {
 
 	void SpawnWaves () {
 		Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
-		Quaternion spawnRotation = new Quaternion();
+		Quaternion spawnRotation = Quaternion.identity;
 		Instantiate(hazard, spawnPosition, spawnRotation);
 	}
 }
