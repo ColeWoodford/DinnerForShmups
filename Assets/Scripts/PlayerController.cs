@@ -11,11 +11,13 @@ public class PlayerController : MonoBehaviour
 {
 	public float speed;
 	public GameObject period_shot;
-	public GameObject Comma_shot;
+	public GameObject comma_shot;
 	public Transform shotSpawn1;
 	public Transform shotSpawn2;
 	public float fireRate;
+	public float fireRate2;
 	private float nextFire;
+	private float nextFire2;
 	private Rigidbody2D playerRB2D;
 	public Boundary boundary;
 
@@ -53,7 +55,11 @@ public class PlayerController : MonoBehaviour
 		{
 			nextFire = Time.time + fireRate;
 			Instantiate (period_shot, shotSpawn1.position, shotSpawn1.rotation);
-			Instantiate (Comma_shot, shotSpawn2.position, shotSpawn2.rotation);
+		} 		
+		else if (Input.GetButton("Fire2") && Time.time > nextFire2)
+		{
+			nextFire2 = Time.time + fireRate2;
+			Instantiate (comma_shot, shotSpawn2.position, shotSpawn2.rotation);
 		} 		
 	}
 }
