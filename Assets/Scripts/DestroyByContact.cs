@@ -5,11 +5,11 @@ using UnityEngine;
 public class DestroyByContact : MonoBehaviour {
 
 	public int scoreValue;
+	public GameObject explosion;
+	public float explodeTime;
+
 	private int health;
 	private GameController gameController;
-	public float colourChangeDelay = 0.5f;
- 	float currentDelay = 0f;
- 	bool colourChangeCollision = false;
 
 	void Start () {
 		health = scoreValue;
@@ -23,37 +23,22 @@ public class DestroyByContact : MonoBehaviour {
 		}
 	}
 
-	void Update()
-	{
-    	checkColourChange();
-	}
-
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Boundary") {
 			return;
 		}
+		if (other.tag == "Player") {
+			gameController.GameOver();
+		}
 
-		colourChangeCollision = true;
-     	currentDelay = Time.time + colourChangeDelay;
 		Destroy(other.gameObject);
 
 		health = health - 10;
 		if (health == 0) {
 			gameController.AddScore (scoreValue);
+			var explode = Instantiate(explosion, other.transform.position, other.transform.rotation);
 			Destroy(gameObject);
+			Destroy(explode, explodeTime);
 		}
-	}
-
-	void checkColourChange()
-	{        
-    	if(colourChangeCollision)
-    	{
-        	transform.renderer.material.color = Color.yellow;
-        	if(Time.time > currentDelay)
-        	{
-            	transform.renderer.material.color = Color.white;
-            	colourChangeCollision = false;
-        	}
-    	}
 	}
 }
