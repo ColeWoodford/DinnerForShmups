@@ -23,15 +23,15 @@ public class DestroyByContact : MonoBehaviour {
 		}
 	}
 
-	void Update()
-	{
-
-	}
-
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Boundary") {
 			return;
 		}
+		if (other.tag == "Player") {
+			gameController.GameOver();
+		}
+
+		Destroy(other.gameObject);
 
 		health = health - 10;
 		if (health == 0) {
