@@ -196,7 +196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 248014936}
   m_Layer: 0
-  m_Name: Shot Spawn3
+  m_Name: beam shot Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -209,7 +209,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 248014935}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.26, y: 8.12, z: -0.08984375}
+  m_LocalPosition: {x: 0.05, y: 4.5, z: -0.08984375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 718248297}
@@ -405,7 +405,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1959957763
+  randomSeed: -449679907
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4032,7 +4032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 702192084}
   m_Layer: 0
-  m_Name: Shot Spawn2
+  m_Name: comma shot spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4089,7 +4089,7 @@ MonoBehaviour:
   comma_shot_Spawn: {fileID: 702192084}
   beam_shot_Spawn: {fileID: 248014936}
   fireRate: 0.25
-  fireRate2: 0
+  beam_shot_firerate: 0.1
   boundary:
     xMin: -7
     xMax: 7
@@ -4288,7 +4288,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1195057939
+  randomSeed: 86061088
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -8045,7 +8045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2102510024}
   m_Layer: 0
-  m_Name: Shot Spawn
+  m_Name: period shot spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
