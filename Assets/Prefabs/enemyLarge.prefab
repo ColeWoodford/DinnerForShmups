@@ -163,6 +163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 50
+  explosion: {fileID: 1384251716789206, guid: 09a7f5a6523bebc4bacf56ac9e4a7e42, type: 2}
+  explodeTime: 1
 --- !u!212 &212955872889148814
 SpriteRenderer:
   m_ObjectHideFlags: 1
