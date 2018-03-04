@@ -146,7 +146,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -224.07, y: -29}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 228.95, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &149522781
 MonoBehaviour:
@@ -4014,12 +4014,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d45e847b222d9e45b62c319d473fa25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hazard: {fileID: 1814951828788804, guid: 94d3cf35d500d4979a634ad30f5917fb, type: 2}
-  spawnValues: {x: 6, y: 7, z: 0}
+  hazard: {fileID: 1860172807379792, guid: 0ba30cb934f38884bad3fdb5e5dff3db, type: 2}
+  spawnValues: {x: 0, y: 5, z: 0}
   hazardCount: 3
-  spawnWait: 3
-  startWait: 3
-  waveWait: 3
+  spawnWait: 10
+  startWait: 5
+  waveWait: 5
   scoreText: {fileID: 1029625942}
   restartText: {fileID: 149522781}
   gameOverText: {fileID: 1884437127}
