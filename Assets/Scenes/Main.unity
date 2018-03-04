@@ -415,7 +415,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 938716470}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1477447768}
@@ -524,27 +524,17 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1477447766}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c97c576aeaa1114cafd3152df6b91cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  horizontalMagnitude: 0.5
-  verticalMagnitude: -1
---- !u!114 &1477447770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1477447766}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34fed9df05a9d0b43a138b88077c3c56, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c9300b13982c1b4c9970af2d7411496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1
+  speedAfterLock: 2
+  horizontalMagnitude: -1
   verticalMagnitude: -1
+  isLeft: 0
+  xPos: -3
   cosMagnitude: 3
   cosSpeed: 3
 --- !u!114 &1477447771
