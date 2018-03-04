@@ -6,7 +6,9 @@ public class DestroyByContact : MonoBehaviour {
 
 	public int scoreValue;
 	public GameObject explosion;
+	public GameObject hit;
 	public float explodeTime;
+	public float hitTime;
 
 	private int health;
 	private GameController gameController;
@@ -28,8 +30,13 @@ public class DestroyByContact : MonoBehaviour {
 			return;
 		}
 		if (other.tag == "Player") {
+			var explode = Instantiate(explosion, other.transform.position, other.transform.rotation);
+			Destroy(explode, explodeTime);
 			gameController.GameOver();
 		}
+		
+		var onHit = Instantiate(hit, other.transform.position, other.transform.rotation);
+		Destroy(onHit, hitTime);
 
 		Destroy(other.gameObject);
 
