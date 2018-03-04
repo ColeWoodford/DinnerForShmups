@@ -343,8 +343,8 @@ MonoBehaviour:
   shotSpawn: {fileID: 2102510024}
   fireRate: 0.25
   boundary:
-    xMin: -5.9
-    xMax: 5.9
+    xMin: -6.3
+    xMax: 6.3
     yMin: -4.15
     yMax: 4.15
 --- !u!61 &718248295
